@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Atmospheric Background -->
+        <div class="atmosphere">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="app-header">
+                <h1 class="app-title">Weather</h1>
+                <p class="app-subtitle">Real-time weather information</p>
+            </header>
+
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="input-wrapper">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="cityInput" 
+                            class="city-input" 
+                            placeholder="Enter city name..."
+                            autocomplete="off"
+                            aria-label="City name input"
+                        >
+                    </div>
+                    <button id="searchBtn" class="search-btn" aria-label="Search weather">
+                        <span class="btn-text">Search</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Weather Result Section -->
+            <section id="weatherResult" class="weather-result" aria-live="polite">
+                <!-- Weather data will be displayed here -->
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Powered by OpenWeather API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
